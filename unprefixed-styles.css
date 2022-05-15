@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+:root {
+  --vdarkblue: #131518;
+  --darkblue: #262e38;
+  --orange: #fc7614;
+  --lightgrey: #969fad;
+  --mediumgrey: #7c8798;
+  --white: #ffffff;
+}
+
+html {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--vdarkblue);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box {
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  border-radius: 30px;
+  height: 416px;
+  width: 412px;
+}
+
+.feedback {
+  margin: 32px 40px 0 32px;
+}
+
+.star-wrap {
+  width: 48px;
+  height: 48px;
+  background: var(--darkblue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35px;
+  color: var(--white);
+  margin-bottom: 15px;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--lightgrey);
+  margin-bottom: 24px;
+}
+
+.rating {
+  margin: 0px 39px 32px 32px;
+  width: 341px;
+  display: flex;
+  justify-content: space-between;
+}
+.rating .orange {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  color: var(--mediumgrey);
+}
+
+.rating button {
+  height: 51px;
+  width: 51px;
+  background-color: var(--darkblue);
+  border-radius: 50%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  transition: 0.5s;
+}
+
+.rating button:hover {
+  background-color: var(--mediumgrey);
+  color: var(--white);
+}
+
+#submit {
+  width: 341px;
+  height: 45px;
+  margin: 0 39px 32px 32px;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: 22.5px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+#submit:hover {
+  background: var(--white);
+  color: var(--orange);
+}
+
+.container {
+  transition: 0.5s;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+.dispNone {
+  display: none;
+}
+
+.submitted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.submitted svg {
+  margin: 45px 129px 32px 121px;
+}
+
+.submitted div {
+  width: 193px;
+  height: 32px;
+  border-radius: 22.5px;
+  background-color: var(--darkblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange);
+  margin-bottom: 32px;
+}
+
+.submitted p {
+  text-align: center;
+  margin: 7px 40px 45px 32px;
+}
+
+@media (max-width: 460px) {
+  .box {
+    width: 327px;
+    height: 360px;
+  }
+
+  .star-wrap {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 16px;
+  }
+
+  .star-wrap svg {
+    transform: scale(0.9);
+  }
+
+  .feedback {
+    margin: 24px 24px 0px 24px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 17px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .rating button {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.175px;
+  }
+
+  .rating {
+    margin: 0px 22px 24px 24px;
+    width: 281px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #submit {
+    height: 45px;
+    width: 279px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1.86667px;
+    margin: 0px 24px 32px 24px;
+  }
+
+  .rating button:hover {
+    background-color: var(--orange);
+    color: var(--white);
+  }
+
+  /*Submit screen starts here*/
+
+  .submitted svg {
+    transform: scale(0.9);
+    margin: 34px 91px 24px 92px;
+  }
+
+  .submitted div {
+    width: 168px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 29px;
+  }
+
+  .submitted p {
+    margin: 0px 24px 37px 24px;
+  }
+}
